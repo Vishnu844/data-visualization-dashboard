@@ -1,0 +1,36 @@
+.categories-heading {
+  margin-bottom: 1rem;
+}
+
+.filter h3 {
+  margin-bottom: 1rem;
+}
+
+.sectors,
+.topics,
+.countries,
+.trades {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.item img:hover {
+  filter: brightness(0.7);
+}

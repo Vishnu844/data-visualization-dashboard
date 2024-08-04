@@ -1,0 +1,97 @@
+section {
+  margin-top: 1.5rem;
+}
+
+section > h1 {
+  color: #12143f;
+  margin-bottom: 0.5rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 9rem;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card div h4 {
+  text-transform: uppercase;
+}
+
+.card div i {
+  font-size: 1.25rem;
+}
+
+.hover-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-1 {
+  background-color: #76b3fa;
+  color: #fff;
+}
+
+.card-1:hover {
+  color: #76b3fa;
+  background-color: #fff;
+}
+
+.card-2 {
+  background-color: #ba71ff;
+  color: #fff;
+}
+
+.card-2:hover {
+  color: #ba71ff;
+  background-color: #fff;
+}
+
+.card-3 {
+  background-color: #ff71b8;
+  color: #fff;
+}
+
+.card-3:hover {
+  color: #ff71b8;
+  background-color: #fff;
+}
+
+.card-4 {
+  background-color: #ec6980;
+  color: #fff;
+}
+
+.card-4:hover {
+  color: #ec6980;
+  background-color: #fff;
+}
+
+.home-charts {
+  margin: 1rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 780px) {
+  .home-charts {
+    margin: 0;
+  }
+}
