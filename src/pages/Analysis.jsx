@@ -21,7 +21,6 @@ const Analysis = () => {
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const baseUrl = "http://localhost:5555";
 
   useEffect(() => {
     const requests = [
