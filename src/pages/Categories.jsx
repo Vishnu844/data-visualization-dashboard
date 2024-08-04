@@ -27,7 +27,6 @@ const Categories = () => {
   const navigate = useNavigate();
   const handleClick = async (arg) => {
     let url;
-    const baseUrl = "http://localhost:5555/";
     if (arg.sector) {
       url = `${process.env.REACT_APP_BASE_URL}api/get-insights-by-categories?sector=${arg.sector}`;
     } else if (arg.topic) {
