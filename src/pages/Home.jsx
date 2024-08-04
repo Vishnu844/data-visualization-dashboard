@@ -12,15 +12,20 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const baseUrl = "http://localhost:5555/";
+  // const baseUrl = "http://localhost:5555/";
+  console.log(process.env.REACT_APP_BASE_URL);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [countData, topCountries, topLikelihood] = await Promise.all([
-          axios.get(baseUrl + "api/get-count"),
-          axios.get(baseUrl + "api/insights-with-different-likelihood"),
+          axios.get(process.env.REACT_APP_BASE_URL + "api/get-count"),
           axios.get(
-            baseUrl + "api/top-5-countries-with-highest-number-of-insights"
+            process.env.REACT_APP_BASE_URL +
+              "api/insights-with-different-likelihood"
+          ),
+          axios.get(
+            process.env.REACT_APP_BASE_URL +
+              "api/top-5-countries-with-highest-number-of-insights"
           ),
         ]);
 

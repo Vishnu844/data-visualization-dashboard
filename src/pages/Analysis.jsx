@@ -25,14 +25,14 @@ const Analysis = () => {
 
   useEffect(() => {
     const requests = [
-      "/api/average-intensity-by-topic",
-      "/api/most-relevant-insights-by-region",
-      "/api/likelihood-by-country",
-      "/api/intensity-over-years",
-      "/api/insights-count-by-country",
-      "/api/prevalent-topics-by-region",
-      "/api/most-relevant-topics",
-      "/api/distribution-by-pestle",
+      "api/average-intensity-by-topic",
+      "api/most-relevant-insights-by-region",
+      "api/likelihood-by-country",
+      "api/intensity-over-years",
+      "api/insights-count-by-country",
+      "api/prevalent-topics-by-region",
+      "api/most-relevant-topics",
+      "api/distribution-by-pestle",
     ];
 
     const fetchData = async () => {
@@ -48,7 +48,9 @@ const Analysis = () => {
           mostRelevantTopics,
           distributionByPestle,
         ] = await Promise.all(
-          requests.map((request) => axios.get(baseUrl + request))
+          requests.map((request) =>
+            axios.get(process.env.REACT_APP_BASE_URL + request)
+          )
         );
 
         setData({

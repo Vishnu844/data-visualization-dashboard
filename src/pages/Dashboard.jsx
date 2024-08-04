@@ -46,7 +46,7 @@ const Dashboard = () => {
     if (searchValue !== "") {
       try {
         const response = await fetch(
-          `http://localhost:5555/api/search?search=${searchValue}`
+          `${process.env.REACT_APP_BASE_URL}api/search?search=${searchValue}`
         );
         const result = await response.json();
         if (result.status === 1) {

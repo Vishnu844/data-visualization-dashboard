@@ -27,15 +27,15 @@ const Categories = () => {
   const navigate = useNavigate();
   const handleClick = async (arg) => {
     let url;
-    const baseUrl = "http://localhost:5555/api/get-insights-by-categories";
+    const baseUrl = "http://localhost:5555/";
     if (arg.sector) {
-      url = `${baseUrl}?sector=${arg.sector}`;
+      url = `${process.env.REACT_APP_BASE_URL}api/get-insights-by-categories?sector=${arg.sector}`;
     } else if (arg.topic) {
-      url = `${baseUrl}?topic=${arg.topic}`;
+      url = `${process.env.REACT_APP_BASE_URL}api/get-insights-by-categories?topic=${arg.topic}`;
     } else if (arg.country) {
-      url = `${baseUrl}?country=${arg.country}`;
+      url = `${process.env.REACT_APP_BASE_URL}api/get-insights-by-categories?country=${arg.country}`;
     } else if (arg.trade) {
-      url = `${baseUrl}?pestle=${arg.trade}`;
+      url = `${process.env.REACT_APP_BASE_URL}api/get-insights-by-categories?pestle=${arg.trade}`;
     }
 
     const response = await axios.get(url);

@@ -17,7 +17,9 @@ const Insights = () => {
     const getInsights = async () => {
       try {
         if (!insights) {
-          const response = await axios.get("http://localhost:5555/api/search");
+          const response = await axios.get(
+            `${process.env.REACT_APP_BASE_URL}api/search`
+          );
           setData(response.data.data);
         } else {
           setData(insights.data);
